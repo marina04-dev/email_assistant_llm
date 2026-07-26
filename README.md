@@ -104,7 +104,7 @@ messages after a refresh.
 
 | Dashboard | Reply thread | Listener terminal |
 |---|---|---|
-| ![dashboard](docs/screenshots/dashboard.png) | ![reply](docs/screenshots/reply-thread.png) | ![terminal](docs/screenshots/terminal.png) |
+| ![dashboard](docs/screenshots/dashboard.jfif) | ![reply](docs/screenshots/reply-thread.jfif) | ![terminal](docs/screenshots/terminal.jfif) |
 
 ## Project structure
 
