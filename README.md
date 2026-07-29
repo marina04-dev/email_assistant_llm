@@ -6,7 +6,6 @@ address, the system generates a contextual reply with Google's Gemini API
 anything else they need assistance with. A small web dashboard shows the
 contacts and the full message log.
 
-Built for the "LLM-Powered Email Automation" challenge (Option B).
 
 ## How it works
 
@@ -42,8 +41,7 @@ guaranteeing every email is answered within a minute at worst.
 
 - **At-most-once replies.** Messages are marked *Seen* before processing:
   if the process crashes halfway, one reply may be missed, but a sender is
-  never spammed with duplicates on restart. For a system talking to humans,
-  duplicates are worse than silence.
+  never spammed with duplicates on restart. 
 - **Loop protection.** Auto-generated mail is never answered: RFC 3834's
   `Auto-Submitted`, Microsoft's `X-Auto-Response-Suppress`, `Precedence:
   bulk/junk/list`, `List-Id`, bounce addresses (`mailer-daemon@`), the bot's
@@ -68,7 +66,7 @@ Prerequisites: Node.js 20+, a Gmail account for the bot, a free Gemini key.
 
 ````
    git clone <this repository>
-   cd llm_email_assistant
+   cd email_assistant_llm
    npm install
 ````
 
@@ -136,6 +134,5 @@ drizzle.config.ts            drizzle-kit configuration
   is no live push to the browser.
 - **Gmail sending limits.** A personal Gmail account is rate-limited
   (~500 recipients/day) — fine for an assistant, not a bulk-mail tool.
-````
 ````
 
