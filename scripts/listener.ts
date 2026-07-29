@@ -31,7 +31,7 @@ function skipReason(mail: ParsedMail, senderEmail: string): string | null {
         return `auto-submitted: ${auto}`;
     }
 
-    // 3) Microsoft convention asking bots not to auto-respond.
+    // 3) Convention asking bots not to auto-respond.
     if (mail.headers.has("x-auto-response-suppress")) {
         return "x-auto-response-suppress header present";
     }
@@ -67,9 +67,7 @@ function skipReason(mail: ParsedMail, senderEmail: string): string | null {
     return null; // human sender — safe to answer
 }
 
-// ---------------------------------------------------------------------------
 // Handles one parsed email end-to-end (steps 2–6 of the header comment).
-// ---------------------------------------------------------------------------
 async function handleEmail(mail: ParsedMail): Promise<void> {
     const senderEmail = (mail.from?.value?.[0]?.address ?? "").toLowerCase();
     const displayName = mail.from?.value?.[0]?.name?.trim() || null;
